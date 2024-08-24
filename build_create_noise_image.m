@@ -1,0 +1,1 @@
+ mex -g -L"C:\Program Files\MATLAB\R2022b\extern\lib\win64\microsoft" -llibmex -llibmx -llibmat  -llibfixedpoint create_noise_image.c create_noise_image_wrapper.c

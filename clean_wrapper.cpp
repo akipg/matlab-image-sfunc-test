@@ -1,0 +1,44 @@
+
+/*
+ * Include Files
+ *
+ */
+#include "simstruc.h"
+
+
+
+/* %%%-SFUNWIZ_wrapper_includes_Changes_BEGIN --- EDIT HERE TO _END */
+typedef struct {
+    unsigned char* data;
+    int width;
+    int height;
+} MyImage;
+/* %%%-SFUNWIZ_wrapper_includes_Changes_END --- EDIT HERE TO _BEGIN */
+#define u_width 1
+#define y_width 1
+
+/*
+ * Create external references here.  
+ *
+ */
+/* %%%-SFUNWIZ_wrapper_externs_Changes_BEGIN --- EDIT HERE TO _END */
+/* extern double func(double a); */
+/* %%%-SFUNWIZ_wrapper_externs_Changes_END --- EDIT HERE TO _BEGIN */
+
+/*
+ * Output function
+ *
+ */
+void clean_Outputs_wrapper(const uint64_T *u0,
+			real_T *y0,
+			SimStruct *S)
+{
+/* %%%-SFUNWIZ_wrapper_Outputs_Changes_BEGIN --- EDIT HERE TO _END */
+    MyImage *img = (MyImage*)*u0;
+    free(img->data);
+    free(img);
+
+/* %%%-SFUNWIZ_wrapper_Outputs_Changes_END --- EDIT HERE TO _BEGIN */
+}
+
+
